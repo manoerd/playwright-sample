@@ -1,0 +1,18 @@
+{
+  "name": "playwright-sample",
+  "version": "1.0.0",
+  "description": "Playwright E2E Tests with AI Capabilities including MCP",
+  "keywords": [
+    "palywright",
+    "playwright-tests"
+  ],
+  "license": "ISC",
+  "author": "Manoharan",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {},
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0"
+  }
+}
