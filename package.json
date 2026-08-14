@@ -7,12 +7,23 @@
     "playwright-tests"
   ],
   "license": "ISC",
-  "author": "Manoharan",
+  "author": "manoerd",
   "type": "commonjs",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+  "test:api": "npx playwright test tests/api/users.api.spec.ts",
+  "dev:config": "npx playwright test --config=config/dev.playwright.config.ts tests/functional/login.spec.ts --headed",
+  "test:e2e": "npx playwright test --config=config/test.playwright.config.ts tests/e2e/nopcommerce.e2e.spec.ts --headed",
+   "test:config": "npx playwright test --config=config/test.playwright.config.ts tests/functional/login.spec.ts --headed",
+   "demo": "npx playwright test tests/demo/mytest.spec.ts --headed",
+   "login": "npx playwright test tests/functional/login.spec.ts"
+  },
   "devDependencies": {
     "@playwright/test": "^1.62.1",
-    "@types/node": "^26.2.0"
+    "@types/node": "^26.2.0",
+    "allure-playwright": "^3.10.2",
+    "chalk": "^6.0.0",
+    "csv-parse": "^7.0.2",
+    "dotenv": "^17.4.2"
   }
 }
