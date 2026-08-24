@@ -2,11 +2,11 @@ import {test, type Page, type Locator} from '@playwright/test';
 
 //Take a screeshot for a full page
 async function takeFullPageScreenshot(page: Page, screenshotName: string){
-const screeshot = await page.screenshot({ fullPage: true});
+const screenshot = await page.screenshot({ fullPage: true});
 
 //Attach it to the report
 await test.info().attach(screenshotName, {
-body: screeshot,
+body: screenshot,
 contentType: "image/png".
 });
 }
@@ -15,11 +15,11 @@ contentType: "image/png".
 async function takeElementScreenshot(element: Locator, screenshotName: string){
 
 //Take a screenshot of element
-const screeshot = await element.screenshot();
+const screenshot = await element.screenshot();
 
 //Attach it to the report
 await test.info().attach(screenshotName, {
-body: screeshot,
+body: screenshot,
 contentType: "image/png".
 });
 }
